@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Chocolate Candy Boxes</title>
+    <script src="chocoArray.js" defer></script>
+    <script src="./lib/jquery-3.7.1.js"></script>
+    <style>
+        .wrapper {
+            display: flex; 
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 90%;
+            border: 2px solid brown;
+        }
+
+        .box {
+            flex: 0 0 400px; 
+            height: 300px; 
+            background-color: #e8e0be;
+            margin: 5px; 
+            font-size: xx-large; 
+            color: brown; 
+            box-sizing: border-box;
+            padding: 2px; 
+            margin: 2px; 
+            font-size: medium;
+            align-content: center;
+        }
+
+        button {
+            background-color: #e8e0be;
+            color: brown;
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        h1 {
+            width: 100%;
+            background-color: brown;
+            color: #e8e0be;
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1> Chocolates </h1>
+    <p>Here are your chocolate options:</p>
+    <p>
+        <button type="button" onclick="toggleCalories()">Hide/Show Calories</button>
+        <button type="button" onclick="randomSample()">Let's get a sample!</button>
+    </p>
+    <div class="wrapper">
+        <div class="box">
+            <img src="chocs/plain_milk.jpg">
+            <h3 class="chocolate">
+                Plain Milk
+            </h3>
+            <p>
+                Smooth milk chocolate
+            </p>
+            <p>
+                Ingredients: cocoa butter, milk, sugar
+            </p>
+            <p class="calories">
+                Calories: 110
+            </p>
+            1
+        </div>
+
+        <div class="box">
+            <img src="chocs/plain_dark.jpg">
+            <h3 class="chocolate">
+                Plain Dark
+            </h3>
+            <p>
+                Smooth milk chocolate and dark chocolate side by side
+            </p>
+            <p>
+                Ingredients: cocoa butter, milk, sugar    
+            </p>
+            <p class="calories">
+                Calories: 100
+            </p>
+            2
+        </div>
+
+        <div class="box">
+            <img src="chocs/plain_hybrid.jpg">
+            <h3 class="chocolate">
+                Plain Hybrid
+            </h3>
+            <p>
+                Smooth milk chocolate and dark chocolate side by side
+            </p>
+            <p>
+                Ingredients: cocoa butter, milk, sugar          
+            </p>
+            <p class="calories">
+                Calories: 105        
+            </p>
+            3
+        </div>
+
+        <div class="box">
+            <img src="chocs/nutter_butter.jpg">
+            <h3 class="chocolate">
+                Nut Butter
+            </h3>
+            <p>
+                Smooth milkchocolate with Bailey's Irish Cream filling
+            </p>
+            <p>
+                Ingredients: cocoa butter, milk, sugar, Bailey's Cream filling 
+            </p>
+            <p class="calories">
+                Calories: 130       
+            </p>
+            4
+        </div>
+
+    </div>
+    
+</body>
+</html>
