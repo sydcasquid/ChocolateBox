@@ -70,3 +70,26 @@ let chocs = [
       img: "assets/plain_hybrid.jpg",
     },
   ];
+
+  let moreInfo = true; 
+
+
+
+  const toggleInfo = () => {
+    moreInfo = !moreInfo;
+    if(moreInfo)
+      $("p.chocolateInfo").show(); 
+    else 
+      $("p.chocolateInfo").hide();
+  };
+  
+  const freeSample = () => {
+    $(".wrapper .box").css("background", "#ffebcd");
+    let randomIndex = Math.floor(Math.random() * 10);
+    console.log(randomIndex);
+    $(".wrapper .box:eq(" + randomIndex + ")").css("background", "#e9eb7a");
+  
+    let cashierNum = Math.floor(Math.random() * 50);
+    alert("Your number is " + cashierNum + ". Give this number to the cashier for a free sample.");
+  
+  };

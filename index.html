@@ -8,40 +8,36 @@
     <script src="./lib/jquery-3.7.1.js"></script>
     <style>
         .wrapper {
-            display: flex; 
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 90%;
-            border: 2px solid brown;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
+          border: 2px solid brown;
         }
-
         .box {
-            flex: 0 0 400px; 
-            height: 300px; 
-            background-color: #e8e0be;
-            margin: 5px; 
-            font-size: xx-large; 
-            color: brown; 
-            box-sizing: border-box;
-            padding: 2px; 
-            margin: 2px; 
-            font-size: medium;
-            align-content: center;
+          flex: 0 0 400px;
+          height: 250px;
+          width: 1500px;
+          background-color:#ffebcd;
+          margin: 5px;
+          font-size: xx-large;
+          color: brown;
+          box-sizing: border-box;
+          padding: 2px;
+          margin: 2px;
+          font-size: medium;
         }
-
         button {
-            background-color: #e8e0be;
-            color: brown;
-            text-align: center;
-            font-size: xx-large;
+          background-color:blanchedalmond;
+          color: brown;
+          font-size: larger;
         }
-
         h1 {
-            width: 100%;
-            background-color: brown;
-            color: #e8e0be;
-            text-align: center;
-            font-size: xx-large;
+          width: 100%;
+          background-color: blanchedalmond;
+          color: brown;
+          text-align: center;
+          font-size: xx-large;
         }
 
         img {
@@ -51,82 +47,145 @@
     </style>
 </head>
 <body>
-    <h1> Chocolates </h1>
-    <p>Here are your chocolate options:</p>
-    <p>
-        <button type="button" onclick="toggleCalories()">Hide/Show Calories</button>
-        <button type="button" onclick="randomSample()">Let's get a sample!</button>
-    </p>
-    <div class="wrapper">
-        <div class="box">
-            <img src="chocs/plain_milk.jpg">
-            <h3 class="chocolate">
-                Plain Milk
-            </h3>
-            <p>
-                Smooth milk chocolate
-            </p>
-            <p>
-                Ingredients: cocoa butter, milk, sugar
-            </p>
-            <p class="calories">
-                Calories: 110
-            </p>
-            1
-        </div>
-
-        <div class="box">
-            <img src="chocs/plain_dark.jpg">
-            <h3 class="chocolate">
-                Plain Dark
-            </h3>
-            <p>
-                Smooth milk chocolate and dark chocolate side by side
-            </p>
-            <p>
-                Ingredients: cocoa butter, milk, sugar    
-            </p>
-            <p class="calories">
-                Calories: 100
-            </p>
-            2
-        </div>
-
-        <div class="box">
-            <img src="chocs/plain_hybrid.jpg">
-            <h3 class="chocolate">
-                Plain Hybrid
-            </h3>
-            <p>
-                Smooth milk chocolate and dark chocolate side by side
-            </p>
-            <p>
-                Ingredients: cocoa butter, milk, sugar          
-            </p>
-            <p class="calories">
-                Calories: 105        
-            </p>
-            3
-        </div>
-
-        <div class="box">
-            <img src="chocs/nutter_butter.jpg">
-            <h3 class="chocolate">
-                Nut Butter
-            </h3>
-            <p>
-                Smooth milkchocolate with Bailey's Irish Cream filling
-            </p>
-            <p>
-                Ingredients: cocoa butter, milk, sugar, Bailey's Cream filling 
-            </p>
-            <p class="calories">
-                Calories: 130       
-            </p>
-            4
-        </div>
-
-    </div>
     
+    <h1>Indianapolis Chocolates</h1>
+    <p>
+        <button type="button" onclick="toggleInfo()">Show More Information</button>
+        <button type="button" onclick="freeSample()">Select a Random Free Sample</button>
+
+    </p>
+
+    <div class="wrapper">
+    <div class="box">
+        1
+        <img src="chocs/plain_milk.jpg"></img>
+        <p class="chocolateName" id = "choc1">
+            Plain Milk
+        </p>
+        <p class="chocolateInfo" id="info1">
+            Smooth milk chocolate
+            Calories: 90 
+            Ingredients: Cocoa butter, milk, cream
+            
+        </p>
+    </div>
+
+    <div class="box">
+        2
+        <img src="chocs/plain_dark.jpg"></img>
+        <p class="chocolateName" id = "choc2">
+            Plain Dark
+        </p>
+        <p class="chocolateInfo" id="info2">
+            Dark chocolate
+            Calories: 90 
+            Ingredients: Cocoa butter, milk, cream
+        </p>
+    </div>
+
+    <div class="box">
+        3
+        <img src="chocs/baileys_cup.jpg"></img>
+        <p class="chocolateName" id = "choc3">
+            Bailey's Cup
+        </p>
+        <p class="chocolateInfo" id="info3">
+            Dark chocolate with Bailey's Cream Filling
+            Calories: 100,
+            Ingredients: Cocoa butter, milk, cream, Bailey's
+        </p>
+    </div>
+
+    <div class="box">
+        4
+        <img src="chocs/cappuccino_cup.jpg"></img>
+        <p class="chocolateName" id = "choc4">
+            Cappuccino Cup
+        </p>
+        <p class="chocolateInfo" id="info4">
+            Dark chocolate with Cappuccino style cream Filling
+            Calories: 120
+            Ingredients: Cocoa butter, milk, cream, Cappuccino fondant
+        </p>
+    </div>
+
+    <div class="box">
+        5
+        <img src="chocs/nutter_butter.jpg"></img>
+        <p class="chocolateName" id = "choc5">
+            Nutter Butter
+        </p>
+        <p class="chocolateInfo" id="info5">
+            Dark chocolate with peanut Butter
+            Calories: 190
+            Ingredients: Cocoa butter, milk, cream, peanut butter
+        </p>
+    </div>
+
+    <div class="box">
+        6
+        <img src="chocs/orange_fondant.jpg"></img>
+        <p class="chocolateName" id = "choc6">
+            Orange Fondant
+        </p>
+        <p class="chocolateInfo" id="info6">
+            Dark chocolate folded with orange fondant
+            Calories: 90
+            Ingredients: Cocoa butter, Milk, Cream, orange peel, orange fondant
+        </p>
+    </div>
+
+    <div class="box">
+        7
+        <img src="chocs/pistachio_diamond.jpg"></img>
+        <p class="chocolateName" id = "choc7">
+            Pistachio Cup
+        </p>
+        <p class="chocolateInfo" id="info7">
+            Dark chocolate with nuggets of pistachio
+            Calories: 90
+            Ingredients: Cocoa butter, Milk, Cream, chunks of pistachio nut
+        </p>
+    </div>
+
+    <div class="box">
+        8
+        <img src="chocs/rum_barrel.jpg"></img>
+        <p class="chocolateName" id = "choc8">
+            Rum Barrel
+        </p>
+        <p class="chocolateInfo" id="info8">
+            Dark chocolate with a decadent rum filling
+            Calories: 90
+            Ingredients: Cocoa butter, Milk, Cream, rum paste and rum flavourings
+        </p>
+    </div>
+
+    <div class="box">
+        9
+        <img src="chocs/toffee_crunch.jpg"></img>
+        <p class="chocolateName" id = "choc9">
+            Toffee Crunch
+        </p>
+        <p class="chocolateInfo" id="info9">
+            Dark chocolate with brittle toffee candy
+            Calories: 90
+            Ingredients: Cocoa butter, Milk, Cream, toffee
+        </p>
+    </div>
+
+    <div class="box">
+        10
+        <img src="chocs/plain_hybrid.jpg"></img>
+        <p class="chocolateName" id = "info10">
+            Plain Supreme
+        </p>
+        <p class="chocolateInfo">
+            Dark chocolate with slivers of milk chocolate
+            Calories: 90
+            Ingredients: Cocoa butter, Milk, Cream
+        </p>
+    </div>
+</div>
 </body>
 </html>
